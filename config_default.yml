@@ -1,0 +1,55 @@
+app:
+    env: dev # dev|prod
+    list_path_organize:
+        - '/path1/'
+        - '/path2/'
+       
+    suffix: ''
+    path_in_process: '/path/in_process/'
+    path_reject : '/path/reject/'
+    path_doublon : '/path/doublon/'
+    ws_ocr_url : 'ip_or_url_of_ws_ocr'
+    ws_debug: '0'
+    ws_gray: '180'
+    
+ext:
+    pdf:
+        ext:
+            - '.pdf'
+        dest_path: '/dest/path/'
+        
+        models:
+            model_example:
+                name: 'Name of the example'
+                fullpath: 'fullpath/of/model/{$p_date_1}_my_file'
+                versions:
+                    v1:
+                        keywords:
+                            - 'keyword 1'
+                            - 'keyword 2'
+                        params:
+                            p_date_1:
+                                pattern: '{$dd}/{$mm}/{$yyyy}'
+                                format_value: 'yyyymm'
+    jpg:
+        ext:
+            - '.jpg'
+            - '.jpeg'
+        dest_path: '/dest/path/'
+        fullpath: "{$yyyy}/{$mm}_{$mmm}/{$src_filename}"
+    vpk:
+        ext:
+            - '.vpk'
+        dest_path: '/dest/path/'
+    mkv:
+        ext:
+            - '.mkv'
+        dest_path: '/dest/path/'
+        fullpath: '{$dest_filename} ({$year})'
+
+    book:
+        ext:
+            - '.cbr'
+            - '.cbz'
+        dest_path: '/dest/path/'
+        
