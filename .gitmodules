@@ -1,0 +1,3 @@
+[submodule "mylibs"]
+	path = mylibs
+	url = https://github.com/FenuaTabu/mylibs.git
